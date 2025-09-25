@@ -5,10 +5,14 @@ from app.model import train_and_save_model
 
 MODEL_PATH = "model.joblib"
 
-# Si le modèle n'existe pas, on le crée
+# Vérifie si le modèle existe, sinon le crée
 if not os.path.exists(MODEL_PATH):
+    print("✅ Modèle non trouvé. Entraînement en cours...")
     train_and_save_model()
+else:
+    print("✅ Modèle chargé depuis le disque.")
 
+# Charge le modèle une fois qu’il existe
 model = joblib.load(MODEL_PATH)
 
 def predict(data):
