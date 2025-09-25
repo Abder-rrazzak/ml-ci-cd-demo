@@ -4,8 +4,9 @@ import requests
 # URL de ton API FastAPI sur Render
 API_URL = "https://ml-ci-cd-demo-2.onrender.com/predict"
 
-st.set_page_config(page_title="Prédicteur Iris 🌸", page_icon="🌸")
+label_names = ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']
 
+st.set_page_config(page_title="Prédicteur Iris 🌸", page_icon="🌸")
 st.title("🌸 Prédicteur de fleurs Iris")
 st.markdown("Entrez les caractéristiques de la fleur pour obtenir une prédiction.")
 
@@ -22,7 +23,8 @@ if st.button("🔍 Prédire"):
     try:
         response = requests.post(API_URL, json=payload)
         response.raise_for_status()
-        prediction = response.json()["prediction"][0]
-        st.success(f"🌼 Prédiction : classe n°{prediction}")
+        prediction_index = response.json()["prediction"][0]
+        flower_name = label_names[prediction_index]
+        st.success(f"🌼 Prédiction : **{flower_name}**")
     except Exception as e:
         st.error(f"Erreur lors de la requête : {e}")
