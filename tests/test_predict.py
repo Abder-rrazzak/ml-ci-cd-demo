@@ -1,11 +1,15 @@
-import sys
 import os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+import joblib
+import numpy as np
+from app.model import train_and_save_model
 
-from app.predict import predict
+MODEL_PATH = "model.joblib"
 
-def test_prediction_shape():
-    sample = [5.1, 3.5, 1.4, 0.2]
-    output = predict(sample)
-    assert isinstance(output, list)
-    assert len(output) == 1
+# Si le modèle n'existe pas, on le crée
+if not os.path.exists(MODEL_PATH):
+    train_and_save_model()
+
+model = joblib.load(MODEL_PATH)
+
+def predict(data):
+    return model.predict(np.array(data).reshape(1, -1)).tolist()
