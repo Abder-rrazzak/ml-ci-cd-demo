@@ -5,3 +5,5 @@ joblib
 numpy
 pytest
 httpx
+streamlit
+requests
