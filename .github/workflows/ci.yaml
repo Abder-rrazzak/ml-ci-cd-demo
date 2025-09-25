@@ -28,4 +28,5 @@ jobs:
         run: python app/model.py
 
       - name: Run tests
-        run: pytest
+        run: PYTHONPATH=. pytest
+
