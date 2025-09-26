@@ -30,6 +30,7 @@ This project demonstrates a full ML lifecycle with modern DevOps best practices:
 ml-ci-cd-demo/
 
 │
+
 ├── app/                     # FastAPI application
 
 │   ├── api.py               # API routes
@@ -39,11 +40,13 @@ ml-ci-cd-demo/
 │   └── predict.py           # Prediction logic
 
 │
+
 ├── models/                  # Saved trained models
 
 │   └── model_v1.joblib
 
 │
+
 ├── tests/                   # Unit and integration tests
 
 │   ├── test_api.py
@@ -51,6 +54,7 @@ ml-ci-cd-demo/
 │   └── test_predict.py
 
 │
+
 ├── .github/
 
 │   └── workflows/
@@ -58,6 +62,7 @@ ml-ci-cd-demo/
 │       └── ci.yml           # GitHub Actions workflow
 
 │
+
 ├── streamlit_app.py         # Streamlit frontend
 
 ├── train.py                 # Model training script (MLflow integrated)
