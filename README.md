@@ -28,9 +28,7 @@ This project demonstrates a full ML lifecycle with modern DevOps best practices:
 ```
 
 ml-ci-cd-demo/
-
 │
-
 ├── app/                     # FastAPI application
 
 │   ├── api.py               # API routes
