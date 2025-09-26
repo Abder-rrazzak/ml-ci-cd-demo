@@ -1,10 +1,5 @@
-Here is your **final, professional, and complete `README.md`** for your Machine Learning CI/CD project.
-It’s production-grade and ready to showcase in a portfolio, GitHub profile, or even for interviews. ✅
-
----
-
 ```markdown
-# 🌸 ML CI/CD Demo — Iris Classification Project
+# ML CI/CD Demo — Iris Classification Project
 
 [![CI](https://github.com/<YOUR-GITHUB-USERNAME>/ml-ci-cd-demo/actions/workflows/ci.yml/badge.svg)](https://github.com/<YOUR-GITHUB-USERNAME>/ml-ci-cd-demo/actions)
 [![API Live](https://img.shields.io/badge/api-live-success)](https://ml-ci-cd-demo-2.onrender.com)
@@ -14,21 +9,21 @@ It’s production-grade and ready to showcase in a portfolio, GitHub profile, or
 
 ---
 
-## 🚀 Project Overview
+## Project Overview
 
 This project demonstrates a full ML lifecycle with modern DevOps best practices:
 
-- 🧠 Train a model on the **Iris** dataset using scikit-learn
-- 🐳 Deploy a REST API using **FastAPI** (served with Uvicorn)
-- 🎈 Build an interactive **Streamlit** web app
-- 🧪 Write unit/integration tests with `pytest`
-- 🔁 Automate testing with **GitHub Actions** CI
-- 📦 Containerize everything using **Docker & docker-compose**
-- 📈 Track training runs with **MLflow**
+- Train a model on the **Iris** dataset using scikit-learn
+- Deploy a REST API using **FastAPI** (served with Uvicorn)
+- Build an interactive **Streamlit** web app
+- Write unit/integration tests with `pytest`
+- Automate testing with **GitHub Actions** CI
+- Containerize everything using **Docker & docker-compose**
+- Track training runs with **MLflow**
 
 ---
 
-## 🗂️ Folder Structure
+## Folder Structure
 
 ```
 
@@ -64,13 +59,13 @@ ml-ci-cd-demo/
 
 ## ⚙️ How to Use
 
-### 🔧 Step 1 — Install Dependencies
+### Step 1 — Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ````
 
-### 🧠 Step 2 — Train the Model
+### Step 2 — Train the Model
 
 This will train a Random Forest model and save it as `model_v1.joblib` in the `models/` directory.
 Also logs the run using **MLflow**.
@@ -79,7 +74,7 @@ Also logs the run using **MLflow**.
 python train.py
 ```
 
-### 🧪 Step 3 — Run Tests
+### Step 3 — Run Tests
 
 ```bash
 pytest
@@ -87,9 +82,9 @@ pytest
 
 ---
 
-## 🐳 Run with Docker
+## Run with Docker
 
-### 📦 Build and Run Locally with `docker-compose`
+### Build and Run Locally with `docker-compose`
 
 ```bash
 docker-compose up --build
@@ -101,19 +96,19 @@ docker-compose up --build
 
 ---
 
-## 🔁 CI/CD with GitHub Actions
+## CI/CD with GitHub Actions
 
 This project includes a full **CI pipeline** that runs on every push:
 
-* ✅ Installs dependencies
-* 🧪 Runs unit & integration tests
-* 🧼 Validates code and ML pipeline
+* Installs dependencies
+* Runs unit & integration tests
+* Validates code and ML pipeline
 
 Config file: `.github/workflows/ci.yml`
 
 ---
 
-## 📊 Model Tracking with MLflow
+## Model Tracking with MLflow
 
 Each training run is tracked using **MLflow**:
 
@@ -131,7 +126,7 @@ Access at: [http://localhost:5000](http://localhost:5000)
 
 ---
 
-## 🔌 API Endpoints (FastAPI)
+## API Endpoints (FastAPI)
 
 | Endpoint   | Method | Description                       |
 | ---------- | ------ | --------------------------------- |
@@ -139,7 +134,7 @@ Access at: [http://localhost:5000](http://localhost:5000)
 | `/health`  | GET    | Health check (status & version)   |
 | `/predict` | POST   | Predict flower type from features |
 
-### 🔎 Example API Usage
+### Example API Usage
 
 ```bash
 curl -X POST http://localhost:8000/predict \
@@ -158,7 +153,7 @@ curl -X POST http://localhost:8000/predict \
 
 ---
 
-## 🖥️ Streamlit Interface
+## Streamlit Interface
 
 The Streamlit frontend connects to the API and allows users to:
 
@@ -174,7 +169,7 @@ streamlit run streamlit_app.py
 
 ---
 
-## ✅ Features Recap
+## Features Recap
 
 * [x] Model training + versioning
 * [x] REST API with FastAPI
@@ -188,7 +183,7 @@ streamlit run streamlit_app.py
 
 ---
 
-## 🔜 Roadmap
+## Roadmap
 
 * [ ] Auto versioning model on each train run
 * [ ] Deploy MLflow server on remote storage (e.g., S3)
@@ -197,7 +192,7 @@ streamlit run streamlit_app.py
 
 ---
 
-## 📄 License
+## License
 
 MIT License © [Abderazzak_ZERROUKI]
 
@@ -205,7 +200,7 @@ MIT License © [Abderazzak_ZERROUKI]
 
 ---
 
-## 🧩 Replace placeholders before publishing:
+## Replace placeholders before publishing:
 
 - `<YOUR-GITHUB-USERNAME>` → your GitHub username
 - `<YOUR-STREAMLIT-URL>` → your Streamlit app URL (if deployed)
