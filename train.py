@@ -6,6 +6,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 import os
+import mlflow
+import mlflow.sklearn
 
 MODEL_DIR = "models"
 MODEL_VERSION = "v1"
@@ -22,11 +24,15 @@ def train_and_save_model():
         ("clf", RandomForestClassifier(n_estimators=100, random_state=42))
     ])
 
-    pipeline.fit(X_train, y_train)
+    with mlflow.start_run():
+        pipeline.fit(X_train, y_train)
+        joblib.dump(pipeline, MODEL_PATH)
+        print(f"✅ Modèle sauvegardé : {MODEL_PATH}")
 
-    os.makedirs(MODEL_DIR, exist_ok=True)
-    joblib.dump(pipeline, MODEL_PATH)
-    print(f"✅ Modèle entraîné et sauvegardé : {MODEL_PATH}")
+        mlflow.log_param("model_version", MODEL_VERSION)
+        mlflow.log_metric("accuracy", pipeline.score(X_test, y_test))
+        mlflow.sklearn.log_model(pipeline, "model")
 
 if __name__ == "__main__":
     train_and_save_model()
+    
