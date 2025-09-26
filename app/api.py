@@ -27,3 +27,7 @@ class PredictionRequest(BaseModel):
 def make_prediction(request: PredictionRequest):
     result = predict(request.features)
     return {"prediction": result}
+
+@app.get("/health", tags=["Monitoring"])
+def health_check():
+    return {"status": "ok", "model_version": "v1"}
