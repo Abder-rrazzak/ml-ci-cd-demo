@@ -1,4 +1,3 @@
-```markdown
 # ML CI/CD Demo — Iris Classification Project
 
 [![CI](https://github.com/<YOUR-GITHUB-USERNAME>/ml-ci-cd-demo/actions/workflows/ci.yml/badge.svg)](https://github.com/<YOUR-GITHUB-USERNAME>/ml-ci-cd-demo/actions)
