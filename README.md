@@ -1,9 +1,5 @@
 # ML CI/CD Demo — Iris Classification Project
 
-[![CI](https://github.com/<YOUR-GITHUB-USERNAME>/ml-ci-cd-demo/actions/workflows/ci.yml/badge.svg)](https://github.com/<YOUR-GITHUB-USERNAME>/ml-ci-cd-demo/actions)
-[![API Live](https://img.shields.io/badge/api-live-success)](https://ml-ci-cd-demo-2.onrender.com)
-[![Streamlit App](https://img.shields.io/badge/demo-streamlit-blue)](https://<YOUR-STREAMLIT-URL>.streamlit.app/)
-
 > End-to-end Machine Learning project: training, versioning, CI/CD, API deployment (FastAPI), UI (Streamlit), containerization (Docker), and testing.
 
 ---
@@ -219,15 +215,6 @@ streamlit run streamlit_app.py
 
 MIT License © [Abderazzak_ZERROUKI]
 
-```
-
----
-
-## Replace placeholders before publishing:
-
-- `<YOUR-GITHUB-USERNAME>` → your GitHub username
-- `<YOUR-STREAMLIT-URL>` → your Streamlit app URL (if deployed)
-- `[Your Name]` → your actual name or GitHub handle
 
 
 
